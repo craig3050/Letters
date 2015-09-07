@@ -1,0 +1,26 @@
+Interrupt Programme:
+
+Interrupt on push button
+Increment +1 to counter
+	if counter >= 4 (reset to 1)
+
+
+main(void):
+
+Check programme counter
+if counter = 1 (run programme 1)
+if counter = 2 (run programme 2)
+if counter = 3 (run programme 3)
+if counter = 4 (run programme 4)
+
+Programme 1 (Manual colour change):
+Variable Resistor pin 1 = Rate of Change
+Variable Resistor pin 2 = Colour wheel
+//how is dimming handled??
+
+
+Programme 2 (Temperature sensor):
+
+
+
+
