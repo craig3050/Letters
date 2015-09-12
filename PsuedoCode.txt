@@ -1,25 +1,62 @@
+int global_counter = 4
+
 Interrupt Programme:
 
 Interrupt on push button
-Increment +1 to counter
+Increment +1 to global counter
 	if counter >= 4 (reset to 1)
 
 
 main(void):
-
+{
 Check programme counter
 if counter = 1 (run programme 1)
 if counter = 2 (run programme 2)
 if counter = 3 (run programme 3)
 if counter = 4 (run programme 4)
+}
+
 
 Programme 1 (Manual colour change):
-Variable Resistor pin 1 = Rate of Change
-Variable Resistor pin 2 = Colour wheel
-//how is dimming handled??
+{
+read Variable Resistor pin 1 = Dimming amount
+read Variable Resistor pin 2 = Colour wheel value
+}
 
 
 Programme 2 (Temperature sensor):
+{
+read temperature
+if temp <12 = Blue
+if temp >12 && <17 = Green
+if temp >=17 && <20 = yellow 
+if temp >=20 && <=25 = orange
+if temp >25 && <30 = Red
+if temp >30 = purple
+read variable resistor pin 1 = Dimming amount
+divide output values by dimming amount
+}
+
+
+Programme 3 (Random colours):
+{
+dimming amount = choose a random value for dimming (1 - 255)
+read variable resistor pin 1 = dimming amount
+divide dimming number by overall dimming amount
+led number = Pick a random number between 1 and #number of LEDs
+send to LED address (led number)
+delay (delayed by amount on dial - up to 2 second)
+}
+
+
+
+Programme 4 (switch off):
+{
+set all LED values to 0
+}
+
+
+
 
 
 
