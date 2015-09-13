@@ -1,0 +1,63 @@
+volatile int global_counter = 4;
+int interrupt_pin = 3;
+
+
+setup(void)
+{
+	attachInterrupt(digitalPinToInterrupt(interrupt_pin), interrupt_prog, FALLING);
+	pinMode(interrupt_pin, INPUT);
+}
+
+interrupt_prog()
+{
+	//incriment 1 to global counter
+	global_counter++;
+
+	//if counter is greater than 4 reset to 1
+	if (global_counter > 4) {global_counter = 1}
+}
+
+
+void(loop)
+{
+	Check programme counter
+	if (global_counter == 1) {programme1}
+	if (global_counter == 2) {programme2}
+	if (global_counter == 3) {programme3}
+	if (global_counter == 4) {programme4}
+}
+
+
+//test programme placeholders
+
+programme1()
+{
+	digitalWrite(1, HIGH);
+	delay(1000);
+	digitalWrite(1, LOW);
+	delay(1000);
+}
+
+programme2()
+{
+	digitalWrite(2, HIGH);
+	delay(1000);
+	digitalWrite(2, LOW);
+	delay(1000);
+}
+
+programme3()
+{
+	digitalWrite(3, HIGH);
+	delay(1000);
+	digitalWrite(3, LOW);
+	delay(1000);
+}
+
+programme4()
+{
+	digitalWrite(4, HIGH);
+	delay(1000);
+	digitalWrite(4, LOW);
+	delay(1000);
+}

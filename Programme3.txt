@@ -1,0 +1,9 @@
+Programme 3 (Random colours):
+{
+dimming amount = choose a random value for dimming (1 - 255)
+read variable resistor pin 1 = dimming amount
+divide dimming number by overall dimming amount
+led number = Pick a random number between 1 and #number of LEDs
+send to LED address (led number)
+delay (delayed by amount on dial - up to 2 second)
+}

@@ -1,0 +1,5 @@
+Programme 1 (Manual colour change):
+{
+read Variable Resistor pin 1 = Dimming amount
+read Variable Resistor pin 2 = Colour wheel value
+}

@@ -1,0 +1,13 @@
+
+Programme 2 (Temperature sensor):
+{
+read temperature
+if temp <12 = Blue
+if temp >12 && <17 = Green
+if temp >=17 && <20 = yellow 
+if temp >=20 && <=25 = orange
+if temp >25 && <30 = Red
+if temp >30 = purple
+read variable resistor pin 1 = Dimming amount
+divide output values by dimming amount
+}
